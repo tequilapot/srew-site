@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #6c757d;
+    --accent-color: #ffc107;
+    --light-color: #f8f9fa;
+    --dark-color: #212529; /* Slightly darker than default for better contrast */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 70px; /* Default for navbar, ADJUST THIS TO YOUR NAVBAR'S ACTUAL HEIGHT */
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+a:hover {
+    color: #003d82; /* Darker shade of primary */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none; /* For consistency unless outline button */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color); /* Bootstrap handles this, but can be explicit */
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #004494;
+    border-color: #004494;
+    color: white;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-curved {
+    border-radius: 30px !important;
+    padding: 12px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.btn-curved:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-sm.btn-curved { /* Specific styling for small curved buttons */
+    padding: 8px 18px;
+    font-size: 0.875rem;
+}
+
+
+.section-header {
+    margin-bottom: 50px;
+}
+.section-header h2 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 2.25rem;
+}
+.section-header h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+.section-header p {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    padding-bottom: 10px; /* Example value */
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+    width: 100%;
+    overflow: hidden;
+    /* display: flex, align-items, and justify-content properties removed from here */
+}
+
+.hero-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;             /* ADDED: Make hero-container a flex parent */
+    align-items: flex-end;     /* ADDED: Align its children (hero-content) to the bottom */
+    justify-content: center;   /* ADDED: Center its children (hero-content) horizontally */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); /* Adjusted overlay darkness */
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Existing padding */
+    padding-bottom: 60px; /* ADDED/ADJUSTED: Gives space from the bottom edge, adjust as needed */
+    width: 100%;
+}
+
+
+.hero-content h1 {
+    font-size: 2.8rem; /* Keep existing styles or adjust as per design */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    color: white; /* ADDED: Ensures the H1 title is white */
+}
+
+.hero-content .lead {
+    font-size: 1.25rem;
+    font-weight: 400; /* Slightly less bold for lead */
+    margin-bottom: 1.5rem;
+    max-width: 700px; /* Constrain width of lead text */
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.usp-badge {
+    display: inline-block;
+    background-color: rgba(0, 82, 164, 0.8);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem !important;
+}
+
+.usp-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    background-color: var(--primary-color);
+}
+
+.hero-buttons {
+    margin-top: 1.5rem; /* Space above buttons */
+}
+
+.hero-buttons .btn {
+    margin: 5px;
+    font-size: 1rem;
+}
+
+/* DEFAULT APPEARANCE for the Download Brochure button */
+.btn-outline-light.btn-curved {
+    background-color: white;            /* Set default background to white */
+    color: var(--dark-color);           /* Set default text to your dark color (black) */
+    border-color: white;                /* Border white (blends with background, shadow gives definition) */
+    /* Inherits padding, border-radius, and base box-shadow from .btn-curved */
+}
+
+/* HOVER STATE for Download Brochure button - making it identical to the default state */
+.btn-outline-light.btn-curved:hover {
+    background-color: white;            /* SAME as default: white background */
+    color: var(--dark-color);           /* SAME as default: dark text */
+    border-color: white;                /* SAME as default: white border */
+
+    /* Explicitly override any hover effects from .btn-curved:hover */
+    transform: none;                    /* Prevent movement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Revert to base shadow of .btn-curved */
+}
+/* Modal Styling */
+.modal-header.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-close-white {
+    filter: brightness(0) invert(1);
+}
+
+/* About Section */
+.about-section h2 {
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+.about-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Reduced gap */
+}
+
+.feature-item {
+    text-align: center;
+    padding: 25px 15px; /* Adjusted padding */
+    background-color: var(--light-color);
+    border-radius: 8px; /* Added border-radius */
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item i {
+    font-size: 2.2rem; /* Adjusted icon size */
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.feature-item h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem; /* Adjusted heading size */
+}
+.feature-item p {
+    font-size: 0.9rem; /* Smaller text for description */
+}
+
+
+/* Products & Projects Cards */
+.product-card, .project-card {
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    transition: all 0.3s ease;
+    height: 100%;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* To contain image rounding if applied */
+}
+
+.product-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.product-image img, .project-image img {
+    /* height and object-fit are inline, can be moved here if consistent */
+    border-bottom: 1px solid #eee; /* Slight separator */
+}
+
+.product-info, .project-info {
+    padding: 20px;
+}
+
+.product-info h3, .project-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Clients Section */
+.clients-section {
+    padding: 30px 0;
+    background-color: #f8f9fa;
+}
+
+.clients-section .section-title {
+    margin-bottom: 30px;
+}
+
+.clients-section .carousel-container {
+    overflow: hidden;
+    position: relative;
+    padding: 15px 0;
+}
+
+.clients-section .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.client-logo-item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+    margin: 0 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo-item img {
+    max-height: 70px;
+    max-width: 170px;
+    object-fit: contain;
+    filter: grayscale(0%);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.client-logo-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Keyframes for CSS client scroll (Example, if not using JS) */
+/* @keyframes scroll-clients {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-180px * NUM_OF_LOGOS_IN_ONE_SET)); } /* Adjust calc based on item width and count */
+/* } */
+
+
+/* CTA Section */
+.cta-section {
+    /* bg-primary is via Bootstrap, text-white too */
+}
+
+/* Footer */
+.footer h3 {
+    font-size: 1.2rem; /* Adjusted size */
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px; /* Adjusted padding */
+    font-weight: 700;
+}
+
+.footer h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px; /* Adjusted width */
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.footer-links li {
+    margin-bottom: 8px; /* Adjusted margin */
+}
+.footer-links a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.contact-info li {
+    margin-bottom: 12px; /* Adjusted margin */
+}
+.contact-info i {
+    margin-top: 3px; /* Fine-tune alignment */
+}
+
+.social-icons a {
+    font-size: 1rem; /* Adjust icon size within circle */
+}
+.social-icons a:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-color) !important;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    width: 55px; /* Slightly smaller */
+    height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 28px; /* Adjusted icon size */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Softer shadow */
+    z-index: 1030; /* Ensure it's above most elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) { /* Medium devices (tablets, less than 992px) */
+    .navbar-brand img {
+        height: 35px;
+    }
+    .navbar-nav .nav-link {
+        padding: 8px 12px;
+    }
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+    .hero-content .lead {
+        font-size: 1.15rem;
+    }
+    .usp-badge {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 767.98px) { /* Small devices (landscape phones, less than 768px) */
+    body {
+        padding-top: 70px; /* Adjust if navbar height changes on mobile */
+    }
+    .hero-section {
+        height: 70vh;
+        min-height: 450px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content .lead {
+        font-size: 1.1rem;
+    }
+    .usp-badge {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+    }
+    .btn-curved {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-buttons .btn {
+        width: 70%;
+        max-width: 280px;
+        margin-bottom: 10px;
+    }
+    .hero-buttons .btn:last-child {
+        margin-bottom: 0;
+    }
+    .about-features {
+        grid-template-columns: 1fr; /* Stack feature items on mobile */
+    }
+    .footer .col-md-4 { /* Stack footer columns */
+        text-align: center;
+    }
+    .footer h3:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer .text-md-end {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 575.98px) { /* Extra small devices (portrait phones, less than 576px) */
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .hero-content .lead {
+        font-size: 1rem;
+    }
+     .usp-badge {
+        font-size: 0.75rem;
+        padding: 6px 15px;
+    }
+    .product-info h3, .project-info h3 {
+        font-size: 1.1rem;
+    }
+}

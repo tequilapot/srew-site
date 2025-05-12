@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - S R ENGG WORKS</title>
+    <meta name="description" content="Get in touch with S R ENGG WORKS for inquiries about our crushing, screening, and material handling solutions, spare parts, or project consultations.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding-top: 100px !important;
+        }
+        .contact-details-card i {
+            width: 20px;
+        }
+        .map-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+        .map-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border:0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="S R ENGG WORKS Logo" height="40" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <li><a class="dropdown-item" href="products.html#jaw-crushers">Jaw Crushers</a></li>
+                            <li><a class="dropdown-item" href="products.html#cone-crushers">Cone Crushers</a></li>
+                            <li><a class="dropdown-item" href="products.html#vsi-hsi-crushers">VSI/HSI Crushers</a></li>
+                            <li><a class="dropdown-item" href="products.html#roller-crushers">Roller Crushers</a></li>
+                            <li><a class="dropdown-item" href="products.html#vibrating-screens">Vibrating Screens</a></li>
+                            <li><a class="dropdown-item" href="products.html#grizzly-feeders">Grizzly Feeders</a></li>
+                            <li><a class="dropdown-item" href="products.html#sand-dryers">Sand Dryers</a></li>
+                            <li><a class="dropdown-item" href="products.html#silos">Silos & Hoppers</a></li>
+                            <li><a class="dropdown-item" href="products.html#control-panels">Control Panels</a></li>
+                            <li><a class="dropdown-item" href="products.html#recycling-units">C&D Recycling Units</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="industries.html">Industries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="spare-parts.html">Spare Parts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Contact Us</h1>
+                    <p class="lead">We're here to help. Reach out to us for any inquiries or support.</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2>Get in Touch</h2>
+                <p>Whether you have a question about our products, need a quote for a project, require spare parts, or want to discuss a custom solution, our team is ready to assist you. Please use the form below or contact us directly through phone or email.</p>
+
+                <form id="contactForm" action="#"> <!-- action="#" is fine if JS handles it -->
+                    <div class="mb-3">
+                        <label for="contactName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="contactName" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="contactEmail" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactPhone" class="form-label">Phone Number (Optional)</label>
+                        <input type="tel" class="form-control" id="contactPhone" name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactSubject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="contactSubject" name="subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactMessage" class="form-label">Message</label>
+                        <textarea class="form-control" id="contactMessage" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div id="form-messages" class="mt-3"></div> <!-- For success/error messages from forms.js -->
+
+            </div>
+
+            <div class="col-lg-5 offset-lg-1">
+                <div class="card contact-details-card">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Contact Details</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="fas fa-map-marker-alt fa-fw me-2 text-primary"></i>
+                                <strong>Address:</strong><br>
+                                11-125, opposite Road, IDA Jeedimetla, jayberi colony, Kompally<br>
+                                Hyderabad, Telangana 500014
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-phone fa-fw me-2 text-primary"></i>
+                                <strong>Phone:</strong><br>
+                                <a href="tel:+917075061622">+91 7075061622</a><br>
+                                <a href="tel:+917997076361">+91 8790759460</a>
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-envelope fa-fw me-2 text-primary"></i>
+                                <strong>Email:</strong><br>
+                                <a href="mailto:srenggworks2016@gmail.com">srenggworks2016@gmail.com</a><br>
+                                <a href="mailto:sales@srenggworks.com">sales@srenggworks.com</a>
+                            </li>
+                             <li class="mb-3">
+                                <i class="fab fa-whatsapp fa-fw me-2 text-primary"></i>
+                                <strong>WhatsApp:</strong><br>
+                                <a href="https://wa.me/918790759460" target="_blank">+91 8790759460</a>
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-clock fa-fw me-2 text-primary"></i>
+                                <strong>Business Hours:</strong><br>
+                                Monday - Saturday: 9:00 AM - 6:00 PM<br>
+                                Sunday: Closed
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-id-card fa-fw me-2 text-primary"></i>
+                                <strong>GSTIN:</strong><br>
+                                36AMIPJ8456B1Z0
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h4>Our Location</h4>
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.3124765326115!2d78.46154547542842!3d17.540303398381397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f1554b670b3%3A0xe27581d046798e10!2sS%20R%20ENGG%20WORKS!5e0!3m2!1sen!2sin!4v1746938279460!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!-- Footer -->
+<footer class="footer py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h3>S R ENGG WORKS</h3>
+                <p>Precision engineering and industrial fabrication company specializing in crushing, screening, sand processing, and material handling plants.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61576211159838" class="text-white me-2" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/thesrew" class="text-white me-2" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/channel/UCXv5mgy6tQZUApyfT3Komtw" class="text-white me-2" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h3>Quick Links</h3>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="index.html" class="text-white">Home</a></li>
+                    <li><a href="about.html" class="text-white">About Us</a></li>
+                    <li><a href="products.html" class="text-white">Products</a></li>
+                    <li><a href="industries.html" class="text-white">Industries</a></li>
+                    <li><a href="projects.html" class="text-white">Projects</a></li>
+                    <li><a href="spare-parts.html" class="text-white">Spare Parts</a></li>
+                    <li><a href="contact.html" class="text-white">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h3>Contact Information</h3>
+                <ul class="list-unstyled contact-info">
+                    <li><i class="fas fa-map-marker-alt me-2"></i> 11-125, IDA Jeedimetla, Dulapally, Telangana, India 500100</li>
+                    <li><i class="fas fa-phone me-2"></i> +91 7075061622 / +91 8790759460</li>
+                    <li><i class="fas fa-envelope me-2"></i> srenggworks2016@gmail.com / sales@srenggworks.com</li>
+                </ul>
+                <div class="mt-3">
+                    <a href="https://wa.me/918790759460" target="_blank" class="btn btn-success btn-curved"><i class="fab fa-whatsapp me-2"></i> Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-4 mb-4" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="mb-2 mb-md-0">© <span id="currentYearContact"></span> S R ENGG WORKS. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <ul class="list-inline mb-0 small">
+                    <li class="list-inline-item"><a href="privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="terms-and-conditions.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                    <li class="list-inline-item"><a href="cookies.html" class="text-white text-decoration-none">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 text-center text-md-end">
+                 <p class="mb-0 small">Designed by S R ENGG WORKS</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/918790759460" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          setTimeout(function() {
+            if (window._hsq) {
+              console.log('SUCCESS: HubSpot tracking code is loaded!');
+            } else {
+              console.error('ERROR: HubSpot tracking code is NOT loaded!');
+            }
+          }, 2000); // Check after 2 seconds to give time for loading
+        });
+      </script>
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- HubSpot Main Tracking Code - ESSENTIAL for non-HubSpot form tracking -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242639779.js"></script>
+    <!-- HubSpot Form Embed Script - Optional if not embedding HubSpot-built forms, but doesn't hurt -->
+    <!-- <script src="https://js-na2.hsforms.net/forms/embed/242639779.js" defer></script> -->
+    <script src="js/main.js" defer></script>
+    <script src="js/forms.js" defer></script> <!-- Added forms.js -->
+    <!-- Removed inline script as its logic is now in forms.js -->
+</body>
+</html>
