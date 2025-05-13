@@ -2,9 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.srenggworks.com/sitemap.xml
-
-
-User-agent: *
-Allow: /
-
-Sitemap: https://www.srenggworks.com/sitemap.xml
