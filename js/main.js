@@ -19,16 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             top: targetElement.offsetTop - navbarHeight,
                             behavior: 'smooth'
                         });
-                        // console.log("Smooth scrolling to:", targetId);
-                    } else {
-                        // console.warn("Smooth scroll target not found:", targetId);
                     }
                 } catch (error) {
-                    // console.warn("Smooth scroll error for selector:", targetId, error);
+                    // Silent error handling
                 }
             } else if (hrefValue === '#') {
                 e.preventDefault();
-                // console.log("Smooth scroll: Link is just '#', preventing default.");
             }
         });
     });
@@ -55,19 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
             homeNavLink.classList.add('active');
         }
     }
-    // console.log("Active nav link logic applied. Current location:", currentLocation);
-
 
     // --- Dynamic Copyright Year ---
-    // Ensure unique IDs if needed, or use a class if multiple elements need this.
-    const currentYearSpan = document.getElementById('currentYear'); // For index.html footer
+    const currentYearSpan = document.getElementById('currentYear');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
-        // console.log("Copyright year updated for 'currentYear'.");
     }
-    const currentYearContactSpan = document.getElementById('currentYearContact'); // For contact.html footer
+    const currentYearContactSpan = document.getElementById('currentYearContact');
     if (currentYearContactSpan) {
         currentYearContactSpan.textContent = new Date().getFullYear();
-        // console.log("Copyright year updated for 'currentYearContact'.");
     }
 });
